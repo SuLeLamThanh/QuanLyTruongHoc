@@ -1,0 +1,1 @@
+restore file database từ 2 file SchoolSysDB. Đổi đường dẫn kết nối thành sql của máy bạn. 
