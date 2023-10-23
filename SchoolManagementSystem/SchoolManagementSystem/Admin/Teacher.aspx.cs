@@ -43,7 +43,7 @@ namespace SchoolManagementSystem.Admin
                     {
                         string query = "Insert into Teacher values('" + txtName.Text.Trim() + "','" + txtDoB.Text.Trim() + "','" + ddlGender.SelectedValue + "','" + txtMobile.Text.Trim() + "','" + txtEmail.Text.Trim() + "','" + txtAddress.Text.Trim() + "','" + txtPassword.Text.Trim() + "')";
                         fn.Query(query);
-                        lblMsg.Text = "Inserted Succesfully";
+                        lblMsg.Text = "Thêm giảng viên thành công";
                         lblMsg.CssClass = "alert alert-success";
                         ddlGender.SelectedIndex = 0;
                         txtName.Text = string.Empty;
@@ -56,13 +56,13 @@ namespace SchoolManagementSystem.Admin
                     }
                     else
                     {
-                        lblMsg.Text = "Entered <b>'" + email + "'</b> already exists!";
+                        lblMsg.Text = "Nhập địa chỉ <b>'" + email + "'</b> đã tồn tại!";
                         lblMsg.CssClass = "alert alert-danger";
                     }
                 }
                 else
                 {
-                    lblMsg.Text = "Gender is required";
+                    lblMsg.Text = "Giới tính chưa được chọn";
                     lblMsg.CssClass = "alert alert-danger";
                 }
             }
@@ -102,7 +102,7 @@ namespace SchoolManagementSystem.Admin
                 string password = (row.FindControl("txtPassword") as TextBox).Text;
                 string address = (row.FindControl("txtAddress") as TextBox).Text;
                 fn.Query("Update Teacher set Name = '" + name.Trim() + "' , Mobile = '" + mobile.Trim() + "', Password = '" + password.Trim() + "', Address = '" + address.Trim() + "' where TeacherId = '" + teacherId + "'");
-                lblMsg.Text = "Teacher Updated Succesfully";
+                lblMsg.Text = "Cập nhật giảng viên thành công!";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 getTeachers() ;
@@ -119,7 +119,7 @@ namespace SchoolManagementSystem.Admin
             {
                 int teacherId = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
                 fn.Query("Delete from Teacher where TeacherId= '" + teacherId + "'");
-                lblMsg.Text = "Teacher Deleted Succesfully";
+                lblMsg.Text = "Xóa giảng viên thành công!";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 getTeachers();

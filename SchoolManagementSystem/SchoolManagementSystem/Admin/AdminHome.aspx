@@ -62,7 +62,7 @@
      </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="background-image: url('../image/download.png'); width: 100%; height: 720px; background-repeat: no-repeat; background-size: cover; background-attachment: fixed">
+    <div style="background-image: url('../image/background.png'); width: 100%; height: 720px; background-repeat: no-repeat; background-size: cover; background-attachment: fixed">
         <%--  <div class="container p-md-4 m-sm-4">
             <div>
                 <asp:Label ID="lblMsg" runat="server"></asp:Label>
@@ -75,7 +75,7 @@
                     <div class="card-counter primary">
                         <i class="fa fa-users"></i>
                         <span class="count-numbers"><%Response.Write(Session["student"]);%></span>
-                        <span class="count-name">Total Students</span>
+                        <span class="count-name">Tổng số sinh viên</span>
                     </div>
                 </div>
 
@@ -83,7 +83,7 @@
                     <div class="card-counter danger">
                         <i class="fa fa-chalkboard-teacher"></i>
                         <span class="count-numbers"><%Response.Write(Session["teacher"]);%></span>
-                        <span class="count-name">Total Teacher</span>
+                        <span class="count-name">Tổng số giảng viên</span>
                     </div>
                 </div>
 
@@ -91,7 +91,7 @@
                     <div class="card-counter success">
                         <i class="fa fa-building"></i>
                         <span class="count-numbers"><%Response.Write(Session["class"]);%></span>
-                        <span class="count-name">Total Class</span>
+                        <span class="count-name">Tổng số lớp học</span>
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@
                     <div class="card-counter info">
                         <i class="fa fa-book"></i>
                         <span class="count-numbers"><%Response.Write(Session["subject"]);%></span>
-                        <span class="count-name">Total Sibjects</span>
+                        <span class="count-name">Tổng số môn học</span>
                     </div>
                 </div>
             </div>

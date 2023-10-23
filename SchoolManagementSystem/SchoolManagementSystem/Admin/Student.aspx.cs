@@ -27,12 +27,13 @@ namespace SchoolManagementSystem.Admin
 
         private void GetClass()
         {
+            
             DataTable dt = fn.Fetch("Select * from Class");
             ddlClass.DataSource = dt;
             ddlClass.DataTextField = "ClassName";
             ddlClass.DataValueField = "ClassId";
             ddlClass.DataBind();
-            ddlClass.Items.Insert(0, "Select Class");
+            ddlClass.Items.Insert(0, "Chọn lớp");
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)

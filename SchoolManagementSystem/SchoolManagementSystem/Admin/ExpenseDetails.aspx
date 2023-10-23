@@ -12,29 +12,29 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="background-image: url('../image/download.png'); width: 100%; height: 720px; background-repeat: no-repeat; background-size: cover; background-attachment: fixed">
+    <div style="background-image: url('../image/background.png'); width: 100%; height: 720px; background-repeat: no-repeat; background-size: cover; background-attachment: fixed">
         <div class="container p-md-4 m-sm-4">
-            <h3 class="text-center">Expense Details</h3>
+            <h3 class="text-center">Chi tiết tiền lương</h3>
 
 
 
             <div class="row mb-3 mr-lg-5 ml-lg-5 ">
                 <div class="col-md-12">
-                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-bordered" EmptyDataText="No record to Display!" AutoGenerateColumns="false">
+                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-bordered" EmptyDataText="Không có dữ liệu để hiển thị" AutoGenerateColumns="false">
                         <Columns>
-                            <asp:BoundField DataField="Sr.No" HeaderText="Sr.No">
+                            <asp:BoundField DataField="Sr.No" HeaderText="Số thứ tự">
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="ClassName" HeaderText="Class">
+                            <asp:BoundField DataField="ClassName" HeaderText="Lớp">
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="SubjectName" HeaderText="Subject">
+                            <asp:BoundField DataField="SubjectName" HeaderText="Môn học">
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="ChargeAmount" HeaderText="Charge Amt(Per Lectors)">
+                            <asp:BoundField DataField="ChargeAmount" HeaderText="Tiền lương">
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>

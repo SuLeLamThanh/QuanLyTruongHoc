@@ -27,6 +27,17 @@ namespace SchoolManagementSystem
         private void Attendance()
         {
             DataTable dt = fn.Fetch("Select TeacherId,Name,Mobile,Email from Teacher");
+            // Đổi tên cột TeacherId thành "Mã giáo viên"
+            dt.Columns["TeacherId"].ColumnName = "Mã giảng viên";
+
+            // Đổi tên cột Name thành "Họ và tên"
+            dt.Columns["Name"].ColumnName = "Họ và tên";
+
+            // Đổi tên cột Mobile thành "Số điện thoại"
+            dt.Columns["Mobile"].ColumnName = "Số điện thoại";
+
+            // Đổi tên cột Email thành "Email"
+            dt.Columns["Email"].ColumnName = "Email";
             GridView1.DataSource = dt;
             GridView1.DataBind();
         }
@@ -49,7 +60,7 @@ namespace SchoolManagementSystem
                     status = 0;
                 }
                 fn.Query("Insert into TeacherAttendance values('" + teacherId + "','" + status + "','" + DateTime.Now.ToString("yyyy/MM/dd") + "')");
-                lblMsg.Text = "Inserted Succesfully";
+                lblMsg.Text = "Nhập chuyên cần thành công!";
                 lblMsg.CssClass = "alert alert-success";
             }
         }

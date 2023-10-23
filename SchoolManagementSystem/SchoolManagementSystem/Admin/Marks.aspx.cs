@@ -40,7 +40,7 @@ namespace SchoolManagementSystem.Admin
             ddlClass.DataTextField = "ClassName";
             ddlClass.DataValueField = "ClassId";
             ddlClass.DataBind();
-            ddlClass.Items.Insert(0, "Select Class");
+            ddlClass.Items.Insert(0, "Chọn lớp");
         }
         protected void ddlClass_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -50,7 +50,7 @@ namespace SchoolManagementSystem.Admin
             ddlSubject.DataTextField = "SubjectName";
             ddlSubject.DataValueField = "SubjectId";
             ddlSubject.DataBind();
-            ddlSubject.Items.Insert(0, "Select Subject");
+            ddlSubject.Items.Insert(0, "Chọn môn học");
         }
         protected void btnAdd_Click(object sender, EventArgs e)
         {
@@ -69,7 +69,7 @@ namespace SchoolManagementSystem.Admin
                     {
                         string query = "Insert into Exam values('" + classId + "','" + subjectId + "','" + rollNo + "','" + studMarks + "','" + outOfMarks + "')";
                         fn.Query(query);
-                        lblMsg.Text = "Inserted Succesfully";
+                        lblMsg.Text = "Thêm thành công!";
                         lblMsg.CssClass = "alert alert-success";
                         ddlClass.SelectedIndex = 0;
                         txtRoll.Text = string.Empty;
@@ -81,13 +81,13 @@ namespace SchoolManagementSystem.Admin
                     }
                     else
                     {
-                        lblMsg.Text = "Entered <b>Data</b> already exists!";
+                        lblMsg.Text = "Nhập <b>dữ liệu</b> đã tồn tại!";
                         lblMsg.CssClass = "alert alert-danger";
                     }
                 }
                 else
                 {
-                    lblMsg.Text = "Entered RollNo <b>"+rollNo+"</b> does not exist for selected Class!";
+                    lblMsg.Text = "Nhập mã số sinh viên <b>"+rollNo+"</b> không tồn tại trong lớp đã chọn!";
                     lblMsg.CssClass = "alert alert-danger";
                 }
 
@@ -128,7 +128,7 @@ namespace SchoolManagementSystem.Admin
                 string studMarks = (row.FindControl("txtStudMarksGv") as TextBox).Text.Trim();
                 string outOfMarks = (row.FindControl("txtOutOfMarksGv") as TextBox).Text.Trim();
                 fn.Query("Update Exam set ClassId = '" + classId + "' , SubjectId = '" + subjectId + "', RollNo='" + rollNo + "', ToTalMarks='" + studMarks + "',OutOfMarks='" + outOfMarks + "' where ExamId = '" + examId + "'");
-                lblMsg.Text = "Expense Updated Succesfully";
+                lblMsg.Text = "Cập nhật điểm thành công";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 GetMarks();
@@ -153,7 +153,7 @@ namespace SchoolManagementSystem.Admin
                     ddlSubject.DataTextField = "SubjectName";
                     ddlSubject.DataValueField = "SubjectId";
                     ddlSubject.DataBind();
-                    ddlSubject.Items.Insert(0, "Select Subject");
+                    ddlSubject.Items.Insert(0, "Chọn môn học");
                     string selectedSubject = DataBinder.Eval(e.Row.DataItem, "SubjectName").ToString();
                     ddlSubject.Items.FindByText(selectedSubject).Selected = true;
 

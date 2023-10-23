@@ -47,7 +47,7 @@ namespace SchoolManagementSystem
             ddlClass.DataTextField = "ClassName";
             ddlClass.DataValueField = "ClassId";
             ddlClass.DataBind();
-            ddlClass.Items.Insert(0, "Select Class");
+            ddlClass.Items.Insert(0, "Chọn lớp");
         }
         private void GetMarks()
         {

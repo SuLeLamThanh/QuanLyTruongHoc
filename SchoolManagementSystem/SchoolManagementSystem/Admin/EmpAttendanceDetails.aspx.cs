@@ -32,7 +32,7 @@ namespace SchoolManagementSystem.Admin
             ddlTeacher.DataTextField = "Name";
             ddlTeacher.DataValueField = "TeacherId";
             ddlTeacher.DataBind();
-            ddlTeacher.Items.Insert(0, "Select Teacher");
+            ddlTeacher.Items.Insert(0, "Chọn giảng viên");
         }
         protected void btnCheckAttendance_Click(object sender, EventArgs e)
         {

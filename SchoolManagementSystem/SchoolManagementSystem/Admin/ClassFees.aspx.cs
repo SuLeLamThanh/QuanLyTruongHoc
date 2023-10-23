@@ -32,7 +32,7 @@ namespace SchoolManagementSystem.Admin
             ddlClass.DataTextField = "ClassName";
             ddlClass.DataValueField = "ClassId";
             ddlClass.DataBind();
-            ddlClass.Items.Insert(0, "Select Class");
+            ddlClass.Items.Insert(0, "Chọn lớp");
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace SchoolManagementSystem.Admin
                 {
                     string query = "Insert into Fees values('"+ddlClass.SelectedItem.Value +"','" + txtFeeAmounts.Text.Trim() + "')";
                     fn.Query(query);
-                    lblMsg.Text = "Inserted Succesfully";
+                    lblMsg.Text = "Thêm thành công!";
                     lblMsg.CssClass = "alert alert-success";
                     ddlClass.SelectedIndex = 0;
                     txtFeeAmounts.Text = string.Empty;
@@ -54,7 +54,7 @@ namespace SchoolManagementSystem.Admin
                 }
                 else
                 {
-                    lblMsg.Text = "Entered Fees already exists for <b>'"+classVal +"'</b>!";
+                    lblMsg.Text = "Học phí đã tồn tại ở lớp <b>'"+classVal +"'</b>!";
                     lblMsg.CssClass = "alert alert-danger";
                 }
             }
@@ -89,7 +89,7 @@ namespace SchoolManagementSystem.Admin
             {
                 int feesId = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
                 fn.Query("Delete from Fees where FeesId= '" + feesId + "'");
-                lblMsg.Text = "Fees Deleted Succesfully";
+                lblMsg.Text = "Xóa học phí thành công!";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 GetFees();
@@ -114,7 +114,7 @@ namespace SchoolManagementSystem.Admin
                 int feesId = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
                 string feeAmt = (row.FindControl("TextBox1") as TextBox).Text;
                 fn.Query("Update Fees set FeesAmount = '" + feeAmt.Trim() + "' where FeesId = '" + feesId + "'");
-                lblMsg.Text = "Fees Updated Succesfully";
+                lblMsg.Text = "Cập nhật học phí thành công!";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 GetFees();

@@ -32,7 +32,7 @@ namespace SchoolManagementSystem.Admin
             ddlClass.DataTextField = "ClassName";
             ddlClass.DataValueField = "ClassId";
             ddlClass.DataBind();
-            ddlClass.Items.Insert(0, "Select Class");
+            ddlClass.Items.Insert(0, "Chọn lớp");
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace SchoolManagementSystem.Admin
                 {
                     string query = "Insert into Subject values('" + ddlClass.SelectedItem.Value + "','" + txtSubject.Text.Trim() + "')";
                     fn.Query(query);
-                    lblMsg.Text = "Inserted Succesfully";
+                    lblMsg.Text = "Thêm thành công!";
                     lblMsg.CssClass = "alert alert-success";
                     ddlClass.SelectedIndex = 0;
                     txtSubject.Text = string.Empty;
@@ -54,7 +54,7 @@ namespace SchoolManagementSystem.Admin
                 }
                 else
                 {
-                    lblMsg.Text = "Entered Subject already exists for <b>'" + classVal + "'</b>!";
+                    lblMsg.Text = "Môn học này đã tồn tại cho lớp <b>'" + classVal + "'</b>!";
                     lblMsg.CssClass = "alert alert-danger";
                 }
             }
@@ -99,7 +99,7 @@ namespace SchoolManagementSystem.Admin
                 string classId = ((DropDownList)GridView1.Rows[e.RowIndex].Cells[2].FindControl("DropDownList1")).SelectedValue;
                 string subjName = (row.FindControl("TextBox1") as TextBox).Text;
                 fn.Query("Update Subject set ClassId = '" + classId + "' , SubjectName = '"+ subjName + "' where SubjectId = '" + subjId + "'");
-                lblMsg.Text = "Subject Updated Succesfully";
+                lblMsg.Text = "Cập nhật môn học thành công!";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 GetSubject();

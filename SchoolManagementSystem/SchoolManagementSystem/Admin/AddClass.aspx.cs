@@ -41,14 +41,14 @@ namespace SchoolManagementSystem.Admin
                 {
                     string query = "Insert into Class values('" +txtClass.Text.Trim() + "')";
                     fn.Query(query);
-                    lblMsg.Text = "Inserted Succesfully";
+                    lblMsg.Text = "Thêm thành công!";
                     lblMsg.CssClass = "alert alert-success";
                     txtClass.Text = string.Empty;
                     GetClass();
                 }
                 else
                 {
-                    lblMsg.Text = "Entered Class already exists!";
+                    lblMsg.Text = "Lớp học này đã tồn tại!";
                     lblMsg.CssClass = "alert alert-danger";
                 }
             }
@@ -83,7 +83,7 @@ namespace SchoolManagementSystem.Admin
                 int cId = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
                 string ClassName = (row.FindControl("txtClassEdit") as TextBox).Text;
                 fn.Query("Update Class set ClassName = '" + ClassName + "' where ClassId ='" + cId + "'");
-                lblMsg.Text = "Class Updated Succesfully";
+                lblMsg.Text = "Cập nhật lớp học thành công!";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 GetClass();

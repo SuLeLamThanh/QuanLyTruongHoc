@@ -15,7 +15,7 @@
             min-height: 100vh;
         }
         .bg-image {
-            background-image: url('../Image/login.png');
+            background-image: url('../Image/Login.png');
             background-size: cover;
             /*background-position: center center;*/
         }
@@ -34,15 +34,15 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 col-xl-7 mx-auto">
-                                    <h3 class="display-4 pb-3">Sign In</h3>
-                                    <p class="text-muted mb-4">Login page for Admin & Teacher.</p>
+                                    <h3 class="display-4 pb-3">Đăng nhập</h3>
+                                    <p class="text-muted mb-4">Trang đăng nhập dành cho Admin và giảng viên.</p>
                                     <div class="form-group mb-3">
-                                        <input id="inputEmail" type="text" placeholder="Email Address" required="" runat="server" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"/>
+                                        <input id="inputEmail" type="text" placeholder="Địa chỉ Email" required="" runat="server" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"/>
                                     </div>
                                     <div class="form-group mb-3 mb-2">
-                                        <input id="inputPassword" type="password" placeholder="Password" required="" runat="server"  class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"/>
+                                        <input id="inputPassword" type="password" placeholder="Mật khẩu" required="" runat="server"  class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"/>
                                     </div>
-                                    <asp:Button ID="btnLogin" runat="server" Text="Sign in" CssClass="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" BackColor="#5558C9" OnClick="btnLogin_Click"/>
+                                    <asp:Button ID="btnLogin" runat="server" Text="Đăng nhập" CssClass="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" BackColor="#5558C9" OnClick="btnLogin_Click"/>
                                     <div class="text-center d-flex justify-content-between mt-4">
                                         <asp:Label ID="lblMsg" runat="server"></asp:Label>
                                     </div>

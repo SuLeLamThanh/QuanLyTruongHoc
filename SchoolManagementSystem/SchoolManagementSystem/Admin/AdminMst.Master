@@ -61,7 +61,7 @@
                             <img src="../Image/logo.png" alt="profile_img">
                         </div>
                         <div class="profile_data">
-                            <p class="name">Admin Module</p>
+                            <p class="name">Admin</p>
                             <span><i class="fas fa-map-marker-alt"></i>TPHCM, VN</span>
                         </div>
                     </div>
@@ -70,76 +70,76 @@
                         <li>
                             <a href="../Admin/AdminHome.aspx">
                                 <div class="icon"><i class="fas fa-home"></i></div>
-                                <div class="title">Home</div>
+                                <div class="title">Trang chủ</div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <div class="icon"><i class="fas fa-hotel"></i></div>
-                                <div class="title">Class</div>
+                                <div class="title">Lớp</div>
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Admin/AddClass.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Add Class</a></li>
-                                <li><a href="../Admin/ClassFees.aspx" class="active"><i class="fas fa-money-bill-alt pr-1"></i>Class Fees</a></li>
+                                <li><a href="../Admin/AddClass.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Thêm lớp</a></li>
+                                <li><a href="../Admin/ClassFees.aspx" class="active"><i class="fas fa-money-bill-alt pr-1"></i>Thêm học phí</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="../Admin/Subject.aspx">
                                 <div class="icon"><i class="fas fa-book"></i></div>
-                                <div class="title">Subjects</div>
+                                <div class="title">Môn học</div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <div class="icon"><i class="fas fa-user-tie"></i></div>
-                                <div class="title">Teachers</div>
+                                <div class="title">Giảng viên</div>
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Admin/Teacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Add Teachers</a></li>
-                                <li><a href="../Admin/TeacherSubject.aspx" class="active"><i class="fas fa-book-reader pr-1"></i>Teachers Subject</a></li>
-                                <li><a href="../Admin/Expense.aspx" class="active"><i class="fas fa-hand-holding-usd pr-1"></i>Add Expense</a></li>
-                                <li><a href="../Admin/ExpenseDetails.aspx" class="active"><i class="fas fa-money-check-alt pr-1"></i>Expense Details</a></li>
+                                <li><a href="../Admin/Teacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Thêm giảng viên</a></li>
+                                <li><a href="../Admin/TeacherSubject.aspx" class="active"><i class="fas fa-book-reader pr-1"></i>Thêm môn học của giảng viên</a></li>
+                                <li><a href="../Admin/Expense.aspx" class="active"><i class="fas fa-hand-holding-usd pr-1"></i>Thêm tiền lương</a></li>
+                                <li><a href="../Admin/ExpenseDetails.aspx" class="active"><i class="fas fa-money-check-alt pr-1"></i>Thống kê tiền lương</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">
                                 <div class="icon"><i class="fas fa-user-graduate"></i></div>
-                                <div class="title">Students</div>
+                                <div class="title">Sinh viên</div>
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Admin/Student.aspx" class="active"><i class="fas fa-users pr-1"></i>Add Students</a></li>
-                                <li><a href="../Admin/StudentAttendanceDetails.aspx" class="active"><i class="far fa-list-alt pr-1"></i>Attendance Details</a></li>
+                                <li><a href="../Admin/Student.aspx" class="active"><i class="fas fa-users pr-1"></i>Thêm sinh viên</a></li>
+                                <li><a href="../Admin/StudentAttendanceDetails.aspx" class="active"><i class="far fa-list-alt pr-1"></i>Chuyên cần của sinh viên</a></li>
                             </ul>
 
                         </li>
                         <li>
                             <a href="#">
                                 <div class="icon"><i class="fas fa-clipboard-list"></i></div>
-                                <div class="title">Examination</div>
+                                <div class="title">Bài thi</div>
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Admin/Marks.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>Add Marks</a></li>
-                                <li><a href="../Admin/MarkDetails.aspx" class="active"><i class="fas fa-clipboard-check pr-1"></i>Marks Details</a></li>
+                                <li><a href="../Admin/Marks.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>Thêm điểm</a></li>
+                                <li><a href="../Admin/MarkDetails.aspx" class="active"><i class="fas fa-clipboard-check pr-1"></i>Thống kê điểm</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">
                                 <div class="icon"><i class="fas fa-calendar-alt"></i></div>
-                                <div class="title">Attendance</div>
+                                <div class="title">Chuyên cần</div>
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Admin/EmployeeAttendance.aspx" class="active"><i class="fas fa-calendar-plus pr-1"></i>Employee Attendance</a></li>
-                                <li><a href="../Admin/EmpAttendanceDetails.aspx" class="active"><i class="fas fa-calendar-check pr-1"></i>Employee Details</a></li>
+                                <li><a href="../Admin/EmployeeAttendance.aspx" class="active"><i class="fas fa-calendar-plus pr-1"></i>Đánh chuyên cần của giảng viên</a></li>
+                                <li><a href="../Admin/EmpAttendanceDetails.aspx" class="active"><i class="fas fa-calendar-check pr-1"></i>Thống kê chuyên cần của giảng viên</a></li>
                             </ul>
                         </li>
                     </ul>
                     <div class="logout_btn">
-                        <asp:LinkButton ID="btnLogOut" runat="server" CausesValidation="false" OnClick="btnLogOut_Click">Logout</asp:LinkButton>
+                        <asp:LinkButton ID="btnLogOut" runat="server" CausesValidation="false" OnClick="btnLogOut_Click">Đăng xuất</asp:LinkButton>
                     </div>
 
                 </div>

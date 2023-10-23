@@ -28,7 +28,7 @@
             });
         });
     </script>
-<%--    Making menu selected for active page--%>
+    <%--    Making menu selected for active page--%>
     <script>
         $(function () {
             /* this will get the full URL at the address bar*/
@@ -60,7 +60,7 @@
                             <img src="../Image/logo.png" alt="profile_img">
                         </div>
                         <div class="profile_data">
-                            <p class="name">Teacher Module</p>
+                            <p class="name">Giảng viên</p>
                             <span><i class="fas fa-map-marker-alt"></i>TPHCM, VN</span>
                         </div>
                     </div>
@@ -69,30 +69,31 @@
                         <li>
                             <a href="../Teacher/TeacherHome.aspx">
                                 <div class="icon"><i class="fas fa-home"></i></div>
-                                <div class="title">Home</div>
+                                <div class="title">Trang chủ</div>
                             </a>
                         </li>
                         <li>
                             <a href="../Teacher/StudentAttendance.aspx">
                                 <div class="icon"><i class="fas fa-calendar-alt"></i></div>
-                                <div class="title">Attendance</div>
+                                <div class="title">Đánh chuyên cần</div>
                             </a>
                         </li>
                         <li>
                             <a href="../Teacher/StudentAttendanceDetails.aspx">
                                 <div class="icon"><i class="fas fa-address-card"></i></div>
-                                <div class="title">Attendance Details</div>
+                                <div class="title">Thống kê chuyên cần</div>
                             </a>
                         </li>
+                            
                         <li>
                             <a href="../Teacher/MarksDetails.aspx">
                                 <div class="icon"><i class="fas fa-clipboard-list"></i></div>
-                                <div class="title">Marks Details</div>
+                                <div class="title">Thống kê điểm</div>
                             </a>
                         </li>
                     </ul>
                     <div class="logout_btn">
-                        <asp:LinkButton ID="btnLogOut" runat="server" CausesValidation="false" OnClick="btnLogOut_Click">Logout</asp:LinkButton>
+                        <asp:LinkButton ID="btnLogOut" runat="server" CausesValidation="false" OnClick="btnLogOut_Click">Đăng xuất</asp:LinkButton>
                     </div>
 
                 </div>

@@ -31,7 +31,7 @@ namespace SchoolManagementSystem.Admin
             ddlClass.DataTextField = "ClassName";
             ddlClass.DataValueField = "ClassId";
             ddlClass.DataBind();
-            ddlClass.Items.Insert(0, "Select Class");
+            ddlClass.Items.Insert(0, "Chọn lớp");
         }
         protected void ddlClass_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -41,7 +41,7 @@ namespace SchoolManagementSystem.Admin
             ddlSubject.DataTextField = "SubjectName";
             ddlSubject.DataValueField = "SubjectId";
             ddlSubject.DataBind();
-            ddlSubject.Items.Insert(0, "Select Subject");
+            ddlSubject.Items.Insert(0, "Chọn môn học");
         }
         private void GetExpense()
         {
@@ -64,7 +64,7 @@ namespace SchoolManagementSystem.Admin
                 {
                     string query = "Insert into Expense values('" + classId + "','" + subjectId + "','" + chargeAmt + "')";
                     fn.Query(query);
-                    lblMsg.Text = "Inserted Succesfully";
+                    lblMsg.Text = "Thêm thành công!";
                     lblMsg.CssClass = "alert alert-success";
                     ddlClass.SelectedIndex = 0;
                     txtExpenseAmount.Text = string.Empty;
@@ -74,7 +74,7 @@ namespace SchoolManagementSystem.Admin
                 }
                 else
                 {
-                    lblMsg.Text = "Entered <b>Data</b> already exists!";
+                    lblMsg.Text = "Nhập <b>dữ liệu</b> đã tồn tại!";
                     lblMsg.CssClass = "alert alert-danger";
                 }
             }
@@ -124,7 +124,7 @@ namespace SchoolManagementSystem.Admin
             {
                 int expenseId = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
                 fn.Query("Delete from Expense where ExpenseId= '" + expenseId + "'");
-                lblMsg.Text = "Expense Deleted Succesfully";
+                lblMsg.Text = "Xóa thành công!";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 GetExpense();
@@ -151,7 +151,7 @@ namespace SchoolManagementSystem.Admin
                 string subjectId = ((DropDownList)GridView1.Rows[e.RowIndex].Cells[2].FindControl("ddlSubjectGv")).SelectedValue;
                 string chargeAmt = (row.FindControl("txtExpenseAmount") as TextBox).Text.Trim();
                 fn.Query("Update Expense set ClassId = '" + classId + "' , SubjectId = '" + subjectId + "', ChargeAmount='" + chargeAmt + "' where ExpenseId = '" + expenseId + "'");
-                lblMsg.Text = "Expense Updated Succesfully";
+                lblMsg.Text = "Cập nhật thành công!";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 GetExpense();

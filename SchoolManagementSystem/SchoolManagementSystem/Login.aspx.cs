@@ -34,7 +34,7 @@ namespace SchoolManagementSystem
             }
             else
             {
-                lblMsg.Text = "Login Failed!!";
+                lblMsg.Text = "Đăng nhập thất bại!!";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
             }
         }

@@ -32,7 +32,7 @@ namespace SchoolManagementSystem.Admin
             ddlClass.DataTextField = "ClassName";
             ddlClass.DataValueField = "ClassId";
             ddlClass.DataBind();
-            ddlClass.Items.Insert(0, "Select Class");
+            ddlClass.Items.Insert(0, "Chọn lớp");
         }
 
         private void GetTeacher()
@@ -42,7 +42,7 @@ namespace SchoolManagementSystem.Admin
             ddlTeacher.DataTextField = "Name";
             ddlTeacher.DataValueField = "TeacherId";
             ddlTeacher.DataBind();
-            ddlTeacher.Items.Insert(0, "Select Teacher");
+            ddlTeacher.Items.Insert(0, "Chọn giảng viên");
         }
         private void GetTeacherSubject()
         {
@@ -64,7 +64,7 @@ namespace SchoolManagementSystem.Admin
             ddlSubject.DataTextField = "SubjectName";
             ddlSubject.DataValueField = "SubjectId";
             ddlSubject.DataBind();
-            ddlSubject.Items.Insert(0, "Select Subject");
+            ddlSubject.Items.Insert(0, "Chọn môn học");
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace SchoolManagementSystem.Admin
                 {
                     string query = "Insert into TeacherSubject values('" + classId + "','" + subjectId + "','" + teacherId + "')";
                     fn.Query(query);
-                    lblMsg.Text = "Inserted Succesfully";
+                    lblMsg.Text = "Thêm thành công!";
                     lblMsg.CssClass = "alert alert-success";
                     ddlClass.SelectedIndex = 0;
                     ddlTeacher.SelectedIndex = 0;
@@ -89,7 +89,7 @@ namespace SchoolManagementSystem.Admin
                 }
                 else
                 {
-                    lblMsg.Text = "Entered <b>Teacher Subject</b> already exists!";
+                    lblMsg.Text = "Nhập <b>môn của giảng viên</b> đã tồn tại!";
                     lblMsg.CssClass = "alert alert-danger";
                 }
             }
@@ -121,7 +121,7 @@ namespace SchoolManagementSystem.Admin
                 string subjectId = ((DropDownList)GridView1.Rows[e.RowIndex].Cells[2].FindControl("ddlSubjectGv")).SelectedValue;
                 string teacherId = ((DropDownList)GridView1.Rows[e.RowIndex].Cells[2].FindControl("ddlTeacherGv")).SelectedValue;
                 fn.Query("Update TeacherSubject set ClassId = '" + classId + "' , SubjectId = '" + subjectId + "', TeacherId='"+teacherId+"' where Id = '" + teacherSubjectId + "'");
-                lblMsg.Text = "TeacherSubject Updated Succesfully";
+                lblMsg.Text = "Cập nhật thành công!";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 GetTeacherSubject();
@@ -138,7 +138,7 @@ namespace SchoolManagementSystem.Admin
             {
                 int teacherSubjectId = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
                 fn.Query("Delete from TeacherSubject where Id= '" + teacherSubjectId + "'");
-                lblMsg.Text = "TeacherSubject Deleted Succesfully";
+                lblMsg.Text = "Xóa thành công!";
                 lblMsg.CssClass = "alert alert-success";
                 GridView1.EditIndex = -1;
                 GetTeacherSubject();

@@ -32,7 +32,7 @@ namespace SchoolManagementSystem.Teacher
             ddlClass.DataTextField = "ClassName";
             ddlClass.DataValueField = "ClassId";
             ddlClass.DataBind();
-            ddlClass.Items.Insert(0, "Select Class");
+            ddlClass.Items.Insert(0, "Chọn lớp");
         }
         protected void ddlClass_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -42,7 +42,7 @@ namespace SchoolManagementSystem.Teacher
             ddlSubject.DataTextField = "SubjectName";
             ddlSubject.DataValueField = "SubjectId";
             ddlSubject.DataBind();
-            ddlSubject.Items.Insert(0, "Select Subject");
+            ddlSubject.Items.Insert(0, "Chọn môn học");
         }
         protected void Timer1_Tick(object sender, EventArgs e)
         {
@@ -89,12 +89,12 @@ namespace SchoolManagementSystem.Teacher
             }
             if (isTrue)
             {
-                lblMsg.Text = "Inserted Succesfully";
+                lblMsg.Text = "Thêm thành công!";
                 lblMsg.CssClass = "alert alert-success";
             }
             else
             {
-                lblMsg.Text = "Sommething went wrong!";
+                lblMsg.Text = "Có lỗi xảy ra!";
                 lblMsg.CssClass = "alert alert-warning";
             }    
         }

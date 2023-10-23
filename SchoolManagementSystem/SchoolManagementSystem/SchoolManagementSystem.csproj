@@ -89,8 +89,8 @@
     <Content Include="Content\styles.css" />
     <Content Include="Admin\EmployeeAttendance.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Image\download.png" />
-    <Content Include="Image\login.png" />
+    <Content Include="Image\background.png" />
+    <Content Include="Image\Login.png" />
     <Content Include="Image\logo.png" />
     <Content Include="Login.aspx" />
     <Content Include="MarkDetailUserControl.ascx" />
