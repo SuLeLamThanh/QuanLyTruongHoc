@@ -1,7 +1,9 @@
 # QuanLyTruongHoc
-B1: Vô SQL Server restore database với file Backup.
-B2: Ấn vào file Web.config trong thư mục SchoolManagementSystem sửa lại ConnectionString trong đó thay giá trị trong Data Source bằng servername của SQL server đang dùng, ví dụ ở đây là Data Source=DESKTOP-82V8EK7\MSSQLSERVER01
+B1: Vô SQL Server restore database với file Backup. 
+B2: Ấn vào file Web.config trong thư mục SchoolManagementSystem sửa lại Data Source trong tag ConnectionString , dữ liệu sau dấu =Data Source  thay bằng giá trị servername của SQL server đang dùng, ví dụ ở đây là Data Source=DESKTOP-82V8EK7\MSSQLSERVER01
 B3: Chạy file bình thường. Account đăng nhập cho Admin là 
 Tài khoản Admin
 Mật khẩu 123
 Tài khoảng cho giảng viên là Email giảng viên đó và mật khẩu do nhập cho giảng viên đó
+
+
